@@ -26,32 +26,32 @@ Aplikasi microservices untuk manajemen ToDoList yang terdiri dari:
 
 ### Backend (Laravel)  
 1. Clone repo  
-   git clone https://github.com/daymouse/todolist-laravel-flutter_.git
+   "git clone https://github.com/daymouse/flutter-laravel-todolist"
    
 3. Masuk ke folder laravel
-   cd laravel_service
+   "cd laravel_service"
 
 4. Install dependencies Laravel  
-   composer install
+   "composer install"
   
 5. Copy file environment  
-   cp .env.example .env 
+   "cp .env.example .env" 
 6. Sesuaikan konfigurasi database di `.env`  
-7. Generate app key  
-   php artisan key:generate
+7. Generate app key
+   "php artisan key:generate"
 
-8. Jalankan migrasi database  (db sudah ada dalam file migration)
-   php artisan migrate
+9. Jalankan migrasi database  (db sudah ada dalam file migration)
+   "php artisan migrate"
   
-9. Jalankan server Laravel  
-   php artisan serve
+10. Jalankan server Laravel  
+   "php artisan serve"
 
 ### Frontend (Flutter)  
 1. Masuk folder flutter app (sesuaikan path)  
 3. Jalankan  
-   flutter pub get
+   "flutter pub get"
    
-   flutter run -d chrome --web-port=59106
+   "flutter run -d chrome --web-port=59106"
    
    (flutter akan berjalan sebagai fluter web dengan port 59106, jika anda ingin merubah port anda perlu merubah bagian 'allowed_origins' pada 'laravel_service\config\cors.php'.
    jika port berbeda akan terjadi XMLHttpRequest eror)
@@ -59,6 +59,7 @@ Aplikasi microservices untuk manajemen ToDoList yang terdiri dari:
 ---
 
 ## Cara Menjalankan  
+- jalankan web server
 - Jalankan backend Laravel terlebih dahulu agar API aktif  
 - Jalankan aplikasi Flutter yang akan berkomunikasi dengan API Laravel  
 
