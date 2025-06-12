@@ -7,7 +7,7 @@ return [
     'allowed_methods' => ['*'],
 
     'allowed_origins' => [
-        'http://localhost:59106',
+        'http://localhost:59898',
     ],
 
     'allowed_origins_patterns' => [],
