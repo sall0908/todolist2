@@ -28,7 +28,7 @@ class _SignUpPageState extends State<SignUpPage> {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        },
+      },
       body: jsonEncode({
         'username': usernameController.text,
         'email': emailController.text,
@@ -53,150 +53,152 @@ class _SignUpPageState extends State<SignUpPage> {
     }
   }
 
-@override
-    Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
     final isWideScreen = MediaQuery.of(context).size.width > 600;
 
     return Scaffold(
-        backgroundColor: const Color(0xFF0E2148),
-        appBar: AppBar(
-        backgroundColor: const Color(0xFF0E2148),
+      backgroundColor: const Color(0xFFE8F5E9), // Light green background
+      appBar: AppBar(
+        backgroundColor: const Color(0xFFA5D6A7), // Green appbar
         elevation: 0,
-        title: const Text('Sign Up'),
-        foregroundColor: Colors.white,
+        title: const Text(
+          'Sign Up',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
-        body: Center(
+        foregroundColor: Colors.white,
+      ),
+      body: Center(
         child: SingleChildScrollView(
-            padding: const EdgeInsets.all(24),
-            child: Container(
+          padding: const EdgeInsets.all(24),
+          child: Container(
             width: isWideScreen ? 400 : double.infinity,
             padding: const EdgeInsets.all(24),
             decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.05),
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(color: Colors.white12),
-                boxShadow: [
+              color: Colors.white.withOpacity(0.9),
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: [
                 BoxShadow(
-                    color: Colors.black.withOpacity(0.3),
-                    blurRadius: 12,
-                    offset: const Offset(0, 6),
+                  color: Colors.green.withOpacity(0.2),
+                  blurRadius: 12,
+                  offset: const Offset(0, 6),
                 ),
-                ],
+              ],
             ),
             child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
                 const Text(
-                    'Sign Up',
-                    style: TextStyle(
+                  'Create Account',
+                  style: TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
-                    color: Color(0xFFE3D095),
-                    ),
-                    textAlign: TextAlign.center,
+                    color: Color(0xFF388E3C), // Deep green
+                  ),
+                  textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 24),
                 if (error.isNotEmpty)
-                    Text(
+                  Text(
                     error,
                     style: const TextStyle(color: Colors.redAccent),
                     textAlign: TextAlign.center,
-                    ),
+                  ),
                 const SizedBox(height: 16),
 
                 // Username
                 TextField(
-                    controller: usernameController,
-                    style: const TextStyle(color: Colors.white),
-                    decoration: InputDecoration(
-                    prefixIcon: const Icon(Icons.person, color: Color(0xFFE3D095)),
+                  controller: usernameController,
+                  style: const TextStyle(color: Colors.black87),
+                  decoration: InputDecoration(
+                    prefixIcon: const Icon(Icons.person, color: Color(0xFF388E3C)),
                     labelText: 'Username',
-                    labelStyle: const TextStyle(color: Colors.white70),
-                    floatingLabelStyle: const TextStyle(color: Color(0xFFE3D095)),
+                    labelStyle: const TextStyle(color: Colors.black54),
+                    floatingLabelStyle: const TextStyle(color: Color(0xFF388E3C)),
                     filled: true,
-                    fillColor: const Color(0xFF483AA0),
+                    fillColor: const Color(0xFFC8E6C9),
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(14),
+                      borderRadius: BorderRadius.circular(14),
                     ),
                     focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(14),
-                        borderSide: const BorderSide(color: Color(0xFFE3D095)),
+                      borderRadius: BorderRadius.circular(14),
+                      borderSide: const BorderSide(color: Color(0xFF388E3C)),
                     ),
-                    ),
+                  ),
                 ),
                 const SizedBox(height: 16),
 
                 // Email
                 TextField(
-                    controller: emailController,
-                    style: const TextStyle(color: Colors.white),
-                    decoration: InputDecoration(
-                    prefixIcon: const Icon(Icons.email, color: Color(0xFFE3D095)),
+                  controller: emailController,
+                  style: const TextStyle(color: Colors.black87),
+                  decoration: InputDecoration(
+                    prefixIcon: const Icon(Icons.email, color: Color(0xFF388E3C)),
                     labelText: 'Email',
-                    labelStyle: const TextStyle(color: Colors.white70),
-                    floatingLabelStyle: const TextStyle(color: Color(0xFFE3D095)),
+                    labelStyle: const TextStyle(color: Colors.black54),
+                    floatingLabelStyle: const TextStyle(color: Color(0xFF388E3C)),
                     filled: true,
-                    fillColor: const Color(0xFF483AA0),
+                    fillColor: const Color(0xFFC8E6C9),
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(14),
+                      borderRadius: BorderRadius.circular(14),
                     ),
                     focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(14),
-                        borderSide: const BorderSide(color: Color(0xFFE3D095)),
+                      borderRadius: BorderRadius.circular(14),
+                      borderSide: const BorderSide(color: Color(0xFF388E3C)),
                     ),
-                    ),
+                  ),
                 ),
                 const SizedBox(height: 16),
 
                 // Password
                 TextField(
-                    controller: passwordController,
-                    obscureText: true,
-                    style: const TextStyle(color: Colors.white),
-                    decoration: InputDecoration(
-                    prefixIcon: const Icon(Icons.lock, color: Color(0xFFE3D095)),
+                  controller: passwordController,
+                  obscureText: true,
+                  style: const TextStyle(color: Colors.black87),
+                  decoration: InputDecoration(
+                    prefixIcon: const Icon(Icons.lock, color: Color(0xFF388E3C)),
                     labelText: 'Password',
-                    labelStyle: const TextStyle(color: Colors.white70),
-                    floatingLabelStyle: const TextStyle(color: Color(0xFFE3D095)),
+                    labelStyle: const TextStyle(color: Colors.black54),
+                    floatingLabelStyle: const TextStyle(color: Color(0xFF388E3C)),
                     filled: true,
-                    fillColor: const Color(0xFF483AA0),
+                    fillColor: const Color(0xFFC8E6C9),
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(14),
+                      borderRadius: BorderRadius.circular(14),
                     ),
                     focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(14),
-                        borderSide: const BorderSide(color: Color(0xFFE3D095)),
+                      borderRadius: BorderRadius.circular(14),
+                      borderSide: const BorderSide(color: Color(0xFF388E3C)),
                     ),
-                    ),
+                  ),
                 ),
                 const SizedBox(height: 24),
 
                 // Submit button
                 loading
-                    ? const Center(child: CircularProgressIndicator(color: Color(0xFFE3D095)))
+                    ? const Center(child: CircularProgressIndicator(color: Color(0xFF388E3C)))
                     : ElevatedButton.icon(
                         onPressed: signup,
-                        icon: const Icon(Icons.arrow_forward, color: Color(0xFF0E2148)),
+                        icon: const Icon(Icons.arrow_forward, color: Colors.white),
                         label: const Text(
-                            'Create Account',
-                            style: TextStyle(
+                          'Create Account',
+                          style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: Color(0xFF0E2148),
-                            ),
+                            color: Colors.white,
+                          ),
                         ),
                         style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFFE3D095),
-                            padding: const EdgeInsets.symmetric(vertical: 16),
-                            shape: RoundedRectangleBorder(
+                          backgroundColor: const Color(0xFF66BB6A),
+                          padding: const EdgeInsets.symmetric(vertical: 16),
+                          shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(14),
-                            ),
+                          ),
                         ),
-                        ),
-                ],
+                      ),
+              ],
             ),
-            ),
+          ),
         ),
-        ),
+      ),
     );
-    }
+  }
 }
