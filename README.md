@@ -63,4 +63,4 @@ Lutfi Faisal Nur Arkarna/19/XI RPL 2
 
 ---
 
-Jika kamu ingin versi satu halaman (one-page readme) atau versi bahasa Inggris juga, tinggal minta!
+
